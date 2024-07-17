@@ -39,6 +39,7 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   display: none; /* Initially hidden */
+  animation: text-flash 1s infinite alternate; /* Continuous flashing and size change */
 }
 
 @keyframes text-flash {
@@ -123,8 +124,8 @@ button {
 
 .heart {
   position: absolute;
-  width: 80px; /* Adjusted size */
-  height: 80px; /* Adjusted size */
+  width: 120px; /* Adjusted size */
+  height: 120px; /* Adjusted size */
   background-image: url('pic3.png');
   background-size: cover;
   animation: heart-rain var(--fall-duration) linear infinite;
