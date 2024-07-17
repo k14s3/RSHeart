@@ -16,7 +16,7 @@ document.getElementById('yes-btn').addEventListener('click', function() {
   proposalText.style.display = 'block';
   proposalText.style.fontSize = '24px'; // Initial font size
   proposalText.style.fontWeight = 'bold'; // Made text bold
-  proposalText.style.animation = 'text-flash 1s infinite alternate'; // Continuous flashing and size change
+  proposalText.style.animation = 'text-flash 1s infinite alternate'; // Continuous flashing
 
   // Create heart elements and animate
   const screenWidth = window.innerWidth;
@@ -35,8 +35,8 @@ document.getElementById('yes-btn').addEventListener('click', function() {
     const heart = document.createElement('div');
     heart.classList.add('heart');
     heart.style.setProperty('--fall-duration', `${Math.random() * 3 + 5}s`); // Adjust fall duration
-    heart.style.width = `${Math.random() * 80 + 60}px`; // Adjust size
-    heart.style.height = `${Math.random() * 80 + 60}px`; // Adjust size
+    heart.style.width = `${Math.random() * 160 + 120}px`; // Adjust size (bigger hearts)
+    heart.style.height = `${Math.random() * 160 + 120}px`; // Adjust size (bigger hearts)
     heart.style.left = `${Math.random() * screenWidth}px`;
     heart.style.top = `${Math.random() * screenHeight}px`;
     heartContainer.appendChild(heart);
