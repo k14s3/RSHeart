@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposal Website</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color: #ffd1dc;">
+  <div class="container">
+    <header>
+      <h1>Ronni, will you be my boyfriend?</h1>
+    </header>
+    <main>
+      <div class="middle-section">
+        <p id="proposal-text" class="proposal-text hidden">I Love You so much, can't wait to spend the rest of my life with you</p>
+        <img id="pic1" src="pic1.jpg" alt="Pic 1" class="hidden">
+        <img id="pic2" src="pic2.jpg" alt="Pic 2">
+        <button id="yes-btn">Yes</button>
+        <button id="no-btn">No</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal for 'No' response -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Not possible, wrong choice. Try again.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
