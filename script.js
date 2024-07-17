@@ -16,15 +16,7 @@ document.getElementById('yes-btn').addEventListener('click', function() {
   proposalText.style.display = 'block';
   proposalText.style.fontSize = '24px'; // Increased font size
   proposalText.style.fontWeight = 'bold'; // Made text bold
-  proposalText.animate([
-    { fontSize: '24px', opacity: 0.5 },
-    { fontSize: '26px', opacity: 1 }
-  ], {
-    duration: 1000,
-    iterations: Infinity,
-    direction: 'alternate',
-    easing: 'ease-in-out'
-  });
+  proposalText.style.animation = 'text-flash 1s infinite alternate'; // Ensure continuous flashing
 
   // Create heart elements and animate
   const screenWidth = window.innerWidth;
@@ -43,8 +35,8 @@ document.getElementById('yes-btn').addEventListener('click', function() {
     const heart = document.createElement('div');
     heart.classList.add('heart');
     heart.style.setProperty('--fall-duration', `${Math.random() * 2 + 3}s`);
-    heart.style.width = `${Math.random() * 70 + 30}px`; // Adjust size
-    heart.style.height = `${Math.random() * 70 + 30}px`; // Adjust size
+    heart.style.width = `${Math.random() * 40 + 20}px`; // Adjust size
+    heart.style.height = `${Math.random() * 40 + 20}px`; // Adjust size
     heart.style.left = `${Math.random() * screenWidth}px`;
     heart.style.top = `${Math.random() * screenHeight}px`;
     heartContainer.appendChild(heart);
