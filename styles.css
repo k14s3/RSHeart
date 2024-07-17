@@ -112,8 +112,8 @@ button {
 .heart {
   position: absolute;
   top: -50px;
-  width: 28px;
-  height: 28px;
+  width: 100px; /* Larger size for hearts */
+  height: 100px;
   background-image: url('pic3.png');
   background-size: cover;
   animation: heart-rain var(--fall-duration) linear infinite;
