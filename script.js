@@ -15,7 +15,7 @@ document.getElementById('yes-btn').addEventListener('click', function() {
   // Show and animate text
   const proposalText = document.getElementById('proposal-text');
   proposalText.style.display = 'block';
-  proposalText.animate([{ fontSize: '18px' }, { fontSize: '24px' }], {
+  proposalText.animate([{ fontSize: '18px' }, { fontSize: '20px' }], {
     duration: 1000,
     iterations: 2,
     direction: 'alternate',
