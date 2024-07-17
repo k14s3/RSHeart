@@ -21,7 +21,7 @@ document.getElementById('yes-btn').addEventListener('click', function() {
   // Create heart elements and animate
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;
-  const heartCount = 30; // Adjust number of hearts
+  const heartCount = 20; // Adjust number of hearts
   const heartContainer = document.createElement('div');
   heartContainer.style.position = 'fixed';
   heartContainer.style.top = '0';
@@ -34,11 +34,15 @@ document.getElementById('yes-btn').addEventListener('click', function() {
   for (let i = 0; i < heartCount; i++) {
     const heart = document.createElement('div');
     heart.classList.add('heart');
-    heart.style.setProperty('--fall-duration', `${Math.random() * 3 + 4}s`); // Adjust fall duration
-    heart.style.width = `${Math.random() * 60 + 40}px`; // Adjust size
-    heart.style.height = `${Math.random() * 60 + 40}px`; // Adjust size
+    heart.style.setProperty('--fall-duration', `${Math.random() * 3 + 5}s`); // Adjust fall duration
+    heart.style.width = `${Math.random() * 80 + 60}px`; // Adjust size
+    heart.style.height = `${Math.random() * 80 + 60}px`; // Adjust size
     heart.style.left = `${Math.random() * screenWidth}px`;
     heart.style.top = `${Math.random() * screenHeight}px`;
     heartContainer.appendChild(heart);
   }
+
+  // Show additional text
+  const additionalText = document.getElementById('additional-text');
+  additionalText.style.display = 'block';
 });
