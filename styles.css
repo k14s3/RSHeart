@@ -32,7 +32,7 @@ h1 {
 }
 
 .proposal-text {
-  font-size: 24px; /* Increased font size */
+  font-size: 24px; /* Initial font size */
   font-weight: bold; /* Made text bold */
   position: absolute;
   bottom: 10%;
@@ -42,11 +42,14 @@ h1 {
 }
 
 @keyframes text-flash {
-  0% {
-    opacity: 0.5;
+  0%, 100% {
+    font-size: 24px;
   }
-  100% {
-    opacity: 1;
+  50% {
+    font-size: 28px;
+  }
+  75% {
+    font-size: 26px;
   }
 }
 
@@ -120,8 +123,8 @@ button {
 
 .heart {
   position: absolute;
-  width: 30px; /* Adjusted size */
-  height: 30px; /* Adjusted size */
+  width: 60px; /* Adjusted size */
+  height: 60px; /* Adjusted size */
   background-image: url('pic3.png');
   background-size: cover;
   animation: heart-rain var(--fall-duration) linear infinite;
