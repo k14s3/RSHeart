@@ -83,10 +83,26 @@ button {
   display: none;
 }
 
-.big-img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 20px;
-  width: 80%; /* Adjust width as needed */
-  max-height: 80vh; /* Adjust max height as needed */
+/* Animation for heart rain */
+@keyframes heart-rain {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.heart {
+  position: absolute;
+  top: -20px;
+  left: calc(50% - 10px);
+  font-size: 24px;
+  color: red;
+  animation: heart-rain 5s linear infinite;
 }
