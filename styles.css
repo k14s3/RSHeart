@@ -43,11 +43,11 @@ h1 {
 }
 
 @keyframes text-flash {
-  from {
+  0% {
     font-size: 18px;
     opacity: 0.5;
   }
-  to {
+  100% {
     font-size: 20px;
     opacity: 1;
   }
