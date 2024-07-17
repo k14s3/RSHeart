@@ -125,7 +125,7 @@ button {
   position: absolute;
   top: -20px;
   left: calc(10% + 80% * random());
-  font-size: 24px;
+  font-size: 28px; /* Adjusted size for pic3 */
   color: red;
   animation: heart-rain 5s linear infinite, heart-fall var(--fall-duration) linear infinite;
 }
