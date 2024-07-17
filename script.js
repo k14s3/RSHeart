@@ -35,8 +35,8 @@ document.getElementById('yes-btn').addEventListener('click', function() {
     const heart = document.createElement('div');
     heart.classList.add('heart');
     heart.style.setProperty('--fall-duration', `${Math.random() * 3 + 5}s`); // Adjust fall duration
-    heart.style.width = `${Math.random() * 80 + 60}px`; // Adjust size
-    heart.style.height = `${Math.random() * 80 + 60}px`; // Adjust size
+    heart.style.width = `${Math.random() * 60 + 40}px`; // Adjust size
+    heart.style.height = `${Math.random() * 60 + 40}px`; // Adjust size
     heart.style.left = `${Math.random() * screenWidth}px`;
     heart.style.top = `${Math.random() * screenHeight}px`;
     heartContainer.appendChild(heart);
