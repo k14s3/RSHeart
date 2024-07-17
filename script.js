@@ -35,14 +35,16 @@ document.getElementById('yes-btn').addEventListener('click', function() {
     const heart = document.createElement('div');
     heart.classList.add('heart');
     heart.style.setProperty('--fall-duration', `${Math.random() * 3 + 5}s`); // Adjust fall duration
-    heart.style.width = `${Math.random() * 60 + 40}px`; // Adjust size
-    heart.style.height = `${Math.random() * 60 + 40}px`; // Adjust size
+    heart.style.width = `${Math.random() * 80 + 60}px`; // Adjust size
+    heart.style.height = `${Math.random() * 80 + 60}px`; // Adjust size
     heart.style.left = `${Math.random() * screenWidth}px`;
     heart.style.top = `${Math.random() * screenHeight}px`;
     heartContainer.appendChild(heart);
   }
 
   // Show additional text
-  const additionalText = document.getElementById('additional-text');
-  additionalText.style.display = 'block';
+  const additionalText = document.createElement('div');
+  additionalText.classList.add('additional-text');
+  additionalText.innerHTML = "<p>God bless the dinosaur that died to make the fossil fuel that was made into petrol for the car that took your mum to the hospital to give birth to an absolute angel like you.</p>";
+  document.body.appendChild(additionalText);
 });
