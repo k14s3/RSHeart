@@ -39,7 +39,7 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   display: none; /* Initially hidden */
-  animation: text-flash 1s infinite alternate; /* Continuous flashing and size change */
+  animation: text-flash 1s infinite alternate; /* Continuous flashing */
 }
 
 @keyframes text-flash {
@@ -47,9 +47,6 @@ h1 {
     font-size: 24px;
   }
   50% {
-    font-size: 28px;
-  }
-  75% {
     font-size: 26px;
   }
 }
@@ -124,8 +121,8 @@ button {
 
 .heart {
   position: absolute;
-  width: 120px; /* Adjusted size */
-  height: 120px; /* Adjusted size */
+  width: 160px; /* Adjusted size (bigger hearts) */
+  height: 160px; /* Adjusted size (bigger hearts) */
   background-image: url('pic3.png');
   background-size: cover;
   animation: heart-rain var(--fall-duration) linear infinite;
@@ -135,10 +132,4 @@ button {
 .additional-text {
   margin-top: 20px;
   text-align: center;
-  display: none; /* Initially hidden */
-}
-
-.additional-text p {
-  font-size: 16px;
-  font-weight: bold;
 }
