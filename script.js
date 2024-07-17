@@ -7,29 +7,38 @@ document.querySelector('.close').addEventListener('click', function() {
 });
 
 document.getElementById('yes-btn').addEventListener('click', function() {
-  document.getElementById('proposal-text').style.display = 'block';
   document.getElementById('pic2').classList.add('hidden');
   document.getElementById('pic1').classList.remove('hidden');
   document.getElementById('yes-btn').style.display = 'none'; // Hide Yes button
   document.getElementById('no-btn').style.display = 'none'; // Hide No button
 
+  // Show and animate text
+  const proposalText = document.getElementById('proposal-text');
+  proposalText.style.display = 'block';
+  proposalText.animate([{ fontSize: '18px' }, { fontSize: '24px' }], {
+    duration: 1000,
+    iterations: 2,
+    direction: 'alternate',
+    easing: 'ease-in-out'
+  });
+
   // Create heart elements and animate
-  for (let i = 0; i < 5; i++) {
-    createHeart();
+  const screenWidth = window.innerWidth;
+  const heartCount = 5;
+  const heartContainer = document.createElement('div');
+  heartContainer.style.position = 'fixed';
+  heartContainer.style.top = '0';
+  heartContainer.style.width = '100%';
+  heartContainer.style.height = '0';
+  heartContainer.style.pointerEvents = 'none';
+  document.body.appendChild(heartContainer);
+
+  for (let i = 0; i < heartCount; i++) {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.style.setProperty('--fall-duration', `${Math.random() * 2 + 1}s`);
+    heart.style.left = `${(i + 0.5) / heartCount * screenWidth}px`;
+    heart.style.animationDelay = `${Math.random() * 2}s`;
+    heartContainer.appendChild(heart);
   }
 });
-
-function createHeart() {
-  const heart = document.createElement('div');
-  heart.innerHTML = '<img src="pic3.png" alt="Heart">';
-  heart.classList.add('heart');
-  document.body.appendChild(heart);
-
-  // Randomize horizontal position and animation duration
-  heart.style.left = `${Math.random() * 100}vw`;
-  heart.style.animationDuration = `${Math.random() * 2 + 1}s`; // Random duration between 1 to 3 seconds
-
-  setTimeout(() => {
-    heart.remove();
-  }, 5000); // Remove heart after 5 seconds
-}
