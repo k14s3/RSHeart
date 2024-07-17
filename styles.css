@@ -2,8 +2,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ffd1dc; /* Light pink background */
-  overflow-x: hidden; /* Prevent horizontal overflow */
+  background-color: #ffd1dc;
+  overflow-x: hidden;
 }
 
 .container {
@@ -11,24 +11,24 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  box-sizing: border-box; /* Include padding in width calculation */
+  box-sizing: border-box;
 }
 
 header {
   text-align: center;
-  margin-bottom: 20px; /* Add space between header and main content */
+  margin-bottom: 20px;
 }
 
 h1 {
   font-size: 24px;
   font-weight: bold;
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 .middle-section {
   text-align: center;
-  margin-top: 20px; /* Adjust margin for better spacing */
-  position: relative; /* Ensure relative positioning for absolutely positioned elements */
+  margin-top: 20px;
+  position: relative;
 }
 
 .proposal-text {
@@ -38,19 +38,7 @@ h1 {
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
-  animation: text-flash 1s infinite alternate; /* Flash animation */
-  display: none; /* Initially hidden */
-}
-
-@keyframes text-flash {
-  0% {
-    font-size: 18px;
-    opacity: 0.5;
-  }
-  100% {
-    font-size: 20px;
-    opacity: 1;
-  }
+  display: none;
 }
 
 img {
@@ -63,7 +51,7 @@ button {
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
-  border-radius: 20px; /* Rounded edges */
+  border-radius: 20px;
 }
 
 .modal {
@@ -123,15 +111,10 @@ button {
 
 .heart {
   position: absolute;
-  top: -20px;
-  left: calc(10% + 80% * random());
-  font-size: 28px; /* Adjusted size for pic3 */
-  color: red;
-  animation: heart-rain 5s linear infinite, heart-fall var(--fall-duration) linear infinite;
-}
-
-@keyframes heart-fall {
-  to {
-    transform: translateY(100vh);
-  }
+  top: -50px;
+  width: 28px;
+  height: 28px;
+  background-image: url('pic3.png');
+  background-size: cover;
+  animation: heart-rain var(--fall-duration) linear infinite;
 }
