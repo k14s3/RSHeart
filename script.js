@@ -26,12 +26,12 @@ document.getElementById('yes-btn').addEventListener('click', function() {
 
   // Create heart elements and animate
   const screenWidth = window.innerWidth;
-  const heartCount = 10;
+  const heartCount = 50; // Increase the number of hearts for a denser rain effect
   const heartContainer = document.createElement('div');
   heartContainer.style.position = 'fixed';
   heartContainer.style.top = '0';
   heartContainer.style.width = '100%';
-  heartContainer.style.height = '0';
+  heartContainer.style.height = '100%';
   heartContainer.style.pointerEvents = 'none';
   document.body.appendChild(heartContainer);
 
