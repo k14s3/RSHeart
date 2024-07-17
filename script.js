@@ -9,10 +9,9 @@ document.querySelector('.close').addEventListener('click', function() {
 document.getElementById('yes-btn').addEventListener('click', function() {
   document.getElementById('pic2').classList.add('hidden');
   document.getElementById('pic1').classList.remove('hidden');
-  document.getElementById('yes-btn').style.display = 'none'; // Hide Yes button
-  document.getElementById('no-btn').style.display = 'none'; // Hide No button
+  document.getElementById('yes-btn').style.display = 'none';
+  document.getElementById('no-btn').style.display = 'none';
 
-  // Show and animate text
   const proposalText = document.getElementById('proposal-text');
   proposalText.style.display = 'block';
   proposalText.animate([
@@ -27,7 +26,7 @@ document.getElementById('yes-btn').addEventListener('click', function() {
 
   // Create heart elements and animate
   const screenWidth = window.innerWidth;
-  const heartCount = 5;
+  const heartCount = 10;
   const heartContainer = document.createElement('div');
   heartContainer.style.position = 'fixed';
   heartContainer.style.top = '0';
@@ -39,9 +38,8 @@ document.getElementById('yes-btn').addEventListener('click', function() {
   for (let i = 0; i < heartCount; i++) {
     const heart = document.createElement('div');
     heart.classList.add('heart');
-    heart.style.setProperty('--fall-duration', `${Math.random() * 2 + 1}s`);
-    heart.style.left = `${(i + 0.5) / heartCount * screenWidth}px`;
-    heart.style.animationDelay = `${Math.random() * 2}s`;
+    heart.style.setProperty('--fall-duration', `${Math.random() * 2 + 3}s`);
+    heart.style.left = `${Math.random() * screenWidth}px`;
     heartContainer.appendChild(heart);
   }
 });
