@@ -114,15 +114,15 @@ button {
     opacity: 1;
   }
   100% {
-    transform: translateY(100vh);
+    transform: translateY(${screenHeight + 200}px); /* Adjust end position */
     opacity: 0;
   }
 }
 
 .heart {
   position: absolute;
-  width: 160px; /* Adjusted size (bigger hearts) */
-  height: 160px; /* Adjusted size (bigger hearts) */
+  width: 180px; /* Adjusted size (bigger hearts) */
+  height: 180px; /* Adjusted size (bigger hearts) */
   background-image: url('pic3.png');
   background-size: cover;
   animation: heart-rain var(--fall-duration) linear infinite;
@@ -132,4 +132,5 @@ button {
 .additional-text {
   margin-top: 20px;
   text-align: center;
+  font-size: 18px; /* Adjust font size */
 }
