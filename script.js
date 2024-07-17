@@ -14,19 +14,21 @@ document.getElementById('yes-btn').addEventListener('click', function() {
 
   const proposalText = document.getElementById('proposal-text');
   proposalText.style.display = 'block';
+  proposalText.style.fontSize = '24px'; // Increase font size
+  proposalText.style.fontWeight = 'bold'; // Make text bold
   proposalText.animate([
-    { fontSize: '18px', opacity: 0.5 },
-    { fontSize: '20px', opacity: 1 }
+    { fontSize: '24px', opacity: 0.5 },
+    { fontSize: '26px', opacity: 1 }
   ], {
     duration: 1000,
-    iterations: 2,
+    iterations: Infinity,
     direction: 'alternate',
     easing: 'ease-in-out'
   });
 
   // Create heart elements and animate
   const screenWidth = window.innerWidth;
-  const heartCount = 50; // Increase the number of hearts for a denser rain effect
+  const heartCount = 20; // Decrease the number of hearts for a lighter effect
   const heartContainer = document.createElement('div');
   heartContainer.style.position = 'fixed';
   heartContainer.style.top = '0';
