@@ -38,7 +38,7 @@ document.getElementById('yes-btn').addEventListener('click', function() {
     heart.style.width = `${Math.random() * 160 + 120}px`; // Adjust size (bigger hearts)
     heart.style.height = `${Math.random() * 160 + 120}px`; // Adjust size (bigger hearts)
     heart.style.left = `${Math.random() * screenWidth}px`;
-    heart.style.top = `${Math.random() * screenHeight}px`;
+    heart.style.top = `${Math.random() * -screenHeight}px`; // Start above the screen
     heartContainer.appendChild(heart);
   }
 
