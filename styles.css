@@ -24,11 +24,29 @@ h1 {
 .middle-section {
   text-align: center;
   margin-top: 50px;
+  position: relative; /* Ensure relative positioning for absolutely positioned elements */
 }
 
 .proposal-text {
   font-size: 18px;
   font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: text-flash 1s infinite alternate; /* Flash animation */
+  display: none; /* Initially hidden */
+}
+
+@keyframes text-flash {
+  from {
+    font-size: 18px;
+    opacity: 0.5;
+  }
+  to {
+    font-size: 24px;
+    opacity: 1;
+  }
 }
 
 img {
@@ -41,6 +59,7 @@ button {
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
+  border-radius: 20px; /* Rounded edges */
 }
 
 .modal {
@@ -101,8 +120,14 @@ button {
 .heart {
   position: absolute;
   top: -20px;
-  left: calc(50% - 10px);
+  left: calc(10% + 80% * random());
   font-size: 24px;
   color: red;
-  animation: heart-rain 5s linear infinite;
+  animation: heart-rain 5s linear infinite, heart-fall var(--fall-duration) linear infinite;
+}
+
+@keyframes heart-fall {
+  to {
+    transform: translateY(100vh);
+  }
 }
